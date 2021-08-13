@@ -15,6 +15,7 @@ export const useApi = (
   const [data, setData] = useState([]);
 
   useEffect(() => {
+    const controller = new AbortController();
     axios({
       url: 'http://localhost:5000/graphiql',
       method: 'POST',
@@ -29,6 +30,10 @@ export const useApi = (
       .catch((err) => {
         setError(err);
       });
+
+    return (): void => {
+      controller.abort();
+    };
   }, [query]);
 
   return { error, data, loading };
