@@ -1,6 +1,7 @@
-# New Project
+# UK News | Condé Nast Front-End
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+This project creates a React Front-End application using snowpack
+that shows the latest news from the United Kingdom, using the newsapi.org service.
 
 ## Available Scripts
 
@@ -17,9 +18,16 @@ You will also see any lint errors in the console.
 Builds a static copy of your site to the `build/` folder.
 Your app is ready to be deployed!
 
-**For the best production performance:** Add a build bundler plugin like "@snowpack/plugin-webpack" to your `snowpack.config.mjs` config file.
-
 ### npm test
 
 Launches the application test runner.
 Run with the `--watch` flag (`npm test -- --watch`) to run in interactive watch mode.
+
+## Environment
+
+This app depends on a local backend service. You can clone, run and follow instruction on the following repo:
+
+<div style="display:flex; align-items:center">
+<img style="width:2rem; margin-right:12px" src="https://image.flaticon.com/icons/png/512/25/25231.png">
+<a href="https://github.com/Hlvr13/conde-nast-backend" rel="noopener noreferrer">https://github.com/Hlvr13/conde-nast-backend</a>
+</div>
