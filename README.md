@@ -28,6 +28,6 @@ Run with the `--watch` flag (`npm test -- --watch`) to run in interactive watch 
 This app depends on a local backend service. You can clone, run and follow instruction on the following repo:
 
 <div style="display:flex; align-items:center">
-<img style="width:2rem; margin-right:12px" src="https://image.flaticon.com/icons/png/512/25/25231.png">
+<img style="margin-right:12px" width="32px" src="https://image.flaticon.com/icons/png/512/25/25231.png">
 <a href="https://github.com/Hlvr13/conde-nast-backend" rel="noopener noreferrer">https://github.com/Hlvr13/conde-nast-backend</a>
 </div>
