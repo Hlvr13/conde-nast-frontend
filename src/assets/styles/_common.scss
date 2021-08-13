@@ -1,0 +1,196 @@
+.container {
+  width: 100%;
+  margin: 0.5rem 1rem;
+}
+
+.search-box {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent !important;
+
+  input {
+    border: none;
+    border: solid 2px gray;
+    padding: 12px;
+    transition: ease-in-out 1s width;
+    background-color: whitesmoke;
+    border-radius: 100px;
+    margin-right: 8px;
+
+    &.active {
+      width: 15rem;
+      border-bottom: solid 2px gray;
+    }
+
+    &.inactive {
+      width: 0px;
+      border: none;
+    }
+  }
+
+  .icon {
+    background: transparent !important;
+    font-size: 1.5rem;
+  }
+}
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview {
+  display: flex;
+  .preview-selected {
+    width: 70vw;
+    height: 100%;
+  }
+}
+
+.article-card {
+  position: relative;
+  height: 80vh;
+  margin: 12px 0px;
+
+  &.preview {
+    position: fixed;
+    width: 43%;
+    height: 95%;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .content {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.363);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .source,
+    .title,
+    .description,
+    .date,
+    .read-more {
+      background: transparent !important;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-bottom: 8px;
+      color: whitesmoke;
+      font-family: $primary-font;
+    }
+
+    .source {
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+    .title {
+      font-size: 2rem;
+    }
+    .date {
+      font-size: 0.8rem;
+    }
+    .description {
+      font-size: 2.2rem;
+    }
+    .read-more {
+      color: #c3baf7;
+    }
+  }
+
+  :hover {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .preview {
+    .preview-selected {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .search-box {
+    position: fixed;
+    bottom: 18px;
+    right: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+      &.active {
+        width: 40rem;
+      }
+
+      &.inactive {
+        width: 0px;
+        border: none;
+      }
+    }
+  }
+
+  .preview-options {
+    .article-card {
+      display: flex;
+      height: 20vh;
+
+      img {
+        height: 100%;
+        width: 25%;
+      }
+
+      .content {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .source,
+        .title,
+        .date,
+        .read-more {
+          background: transparent !important;
+          margin-left: 1rem;
+          margin-bottom: 8px;
+          color: rgb(97, 92, 92);
+          font-family: $primary-font;
+        }
+
+        .source {
+          font-size: 1rem;
+          font-style: italic;
+        }
+        .title {
+          font-size: 1.2rem;
+        }
+        .date {
+          font-size: 0.8rem;
+        }
+        .read-more {
+          color: darkslateblue;
+        }
+      }
+    }
+  }
+}
