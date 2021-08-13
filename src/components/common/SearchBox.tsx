@@ -5,7 +5,7 @@ const SearchBox = ({ handleOnChange }: any) => {
   const [searchActive, setSearchActive] = useState(false);
 
   return (
-    <div className="search-box">
+    <div data-testid="search-box" className="search-box">
       <input
         className={`${searchActive ? 'active' : 'inactive'}`}
         placeholder="Search"
@@ -13,6 +13,7 @@ const SearchBox = ({ handleOnChange }: any) => {
       />
 
       <FaSearch
+        data-testid="search-icon"
         className="icon"
         onClick={() => {
           setSearchActive(!searchActive);

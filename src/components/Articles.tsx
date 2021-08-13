@@ -37,7 +37,8 @@ const Articles = ({}: ArticleProps) => {
     topUKArticles && setSelectedArticle(topUKArticles[0]);
   }, [topUKArticles]);
 
-  if (error) return <h1>Oops! Something went wrong</h1>;
+  if (error)
+    return <h1 data-testid="articles-component">Oops! Something went wrong</h1>;
 
   /** We can use a HOC for every loader. Since it is a simple app, just
    * render it over here.
@@ -54,7 +55,7 @@ const Articles = ({}: ArticleProps) => {
   };
 
   return (
-    <section>
+    <section data-testid="articles-component">
       <div className="container">
         <div className="preview">
           <div className="preview-selected">
